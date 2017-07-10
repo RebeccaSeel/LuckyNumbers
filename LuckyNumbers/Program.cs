@@ -80,15 +80,21 @@ namespace LuckyNumbers
                     totalMatches++;
                 }
             }
-            Console.WriteLine("You guessed " + totalMatches + " numbers correctly.");
+            Console.WriteLine("You guessed " + totalMatches + " number(s) correctly.");
             int totalWinnings = jackpot / totalMatches;
-            Console.WriteLine("You won $" + totalWinnings);
+            if (totalWinnings > 0)
+            {
+                Console.WriteLine("You won $" + totalWinnings);
+            }
+            else
+            {
+                Console.WriteLine("I'm sorry, you didn't win anything...");
+            }
+            
 
             //PART4
             //ask user if they want to play again, continue if yes, stop if no
             Console.WriteLine("Would you like to play again? YES/NO");
-            //do
-            //{
                 playAgain = Console.ReadLine();
                 if (playAgain == "NO")
                 {
